@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <div class="">
+    <h1>{{autor}}</h1>
+      <table class="table table-striped table-hover table-bordered table-sm bg-white">
+        <thead>
+          <tr>
+            <td>Titulo de Articulo</td>
+            <td>Numero de Citaciones</td>
+            <td>Año</td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for articulo in articulos %}
+         <tr>
+            <td>{{articulo.1}}</td>
+            <td>{{articulo.2}}</td>
+            <td>{{articulo.3}}</td>
+          </tr> 
+          {% endfor %}
+        </tbody>
+      </table>
+  </div> 
+</div>
+
+{% endblock %}
